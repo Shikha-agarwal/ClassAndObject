@@ -1,3 +1,5 @@
+package Constructor;
+
 /**
  * Created By: Shikha Agarwal
  * Project Name: Class And Object
@@ -12,12 +14,12 @@ public class BankAccount {
     private long phoneNo;
 
     public BankAccount() {
+        System.out.println("Empty constructo called");
         this.acNo = 12345;
         this.balance = 0.0;
         this.customerName = "Shikha Agarwal";
         this.email = "xjshhu@gmail.com";
         this.phoneNo = 123456789;
-
     }
 
     public void depositFund(int money) {
@@ -26,7 +28,7 @@ public class BankAccount {
     }
 
     public void withdrawAmount(int amount) {
-        if(this.balance < amount) {
+        if (this.balance < amount) {
             System.out.println("Transaction incomplete. Your account balance : " + this.balance);
         } else {
             this.balance -= amount;
