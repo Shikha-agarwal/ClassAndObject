@@ -20,6 +20,20 @@ public class BankAccount {
 
     }
 
+    public void depositFund(int money) {
+        this.balance += money;
+        System.out.println("Deposited ammount: " + money + " . The new account balance : " + this.balance);
+    }
+
+    public void withdrawAmount(int amount) {
+        if(this.balance < amount) {
+            System.out.println("Transaction incomplete. Your account balance : " + this.balance);
+        } else {
+            this.balance -= amount;
+            System.out.println("Amount withdrawn : " + amount + " . The new balance is : " + this.balance);
+        }
+    }
+
     public int getAcNo() {
         return acNo;
     }
@@ -58,20 +72,6 @@ public class BankAccount {
 
     public void setCustomerName(String customerName) {
         this.customerName = customerName;
-    }
-
-    public void depositFund(int money) {
-        this.balance += money;
-        System.out.println("Deposited ammount: " + money + " . The new account balance : " + balance);
-    }
-
-    public void withdrawAmount(int amount) {
-        if(this.balance < amount) {
-            System.out.println("Transaction incomplete. Your account balance : " + balance);
-        } else {
-            this.balance -= amount;
-            System.out.println("Amount withdrawn : " + amount + " . The new balance is : " + balance);
-        }
     }
 }
 
