@@ -65,7 +65,7 @@ public class BankAccount {
         System.out.println("Deposited ammount: " + money + " . The new account balance : " + balance);
     }
 
-    private void withdrawAmount(int amount) {
+    public void withdrawAmount(int amount) {
         if(this.balance < amount) {
             System.out.println("Transaction incomplete. Your account balance : " + balance);
         } else {
